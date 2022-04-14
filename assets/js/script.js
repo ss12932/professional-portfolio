@@ -1,6 +1,6 @@
 "use strict";
 const introReveal = document.querySelectorAll(".intro-title");
-const navLinks = document.querySelector(".nav-bar");
+const navLinks = document.querySelector(".header");
 
 window.addEventListener("load", function (event) {
   event.preventDefault(); //on page load, unintended behaviour of section 1 title expanding to full size. this effect not intended.
