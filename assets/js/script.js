@@ -1,14 +1,15 @@
 "use strict";
-const introReveal = document.querySelectorAll(".intro-title");
+const titleReveal = document.querySelectorAll(".title-hide");
 const navLinks = document.querySelector(".header");
+const flipIcon = document.querySelector(".nav-link");
 
 window.addEventListener("load", function (event) {
   event.preventDefault(); //on page load, unintended behaviour of section 1 title expanding to full size. this effect not intended.
-  introReveal.forEach(function (span, i) {
+  titleReveal.forEach(function (span, i) {
     setTimeout(() => {
       span.classList.remove("title-hide");
       span.classList.add("title-reveal");
-    }, 1500 * i);
+    }, 1200 * i);
   });
 });
 

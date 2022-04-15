@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  scroll-margin-top: 10vh;
 }
 
 :root {
@@ -18,14 +19,12 @@ body {
   height: 10vh;
   width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   background-color: black;
-  border-bottom: 1px solid black;
 }
 
 .nav-bar {
-  width: 75%;
+  width: 85%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -34,55 +33,80 @@ main {
   margin-top: 10vh;
 }
 .name-title {
-  padding-left: 1.5rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Sora", sans-serif;
   font-size: 3.2rem;
-  color: white;
   font-weight: bold;
   text-transform: uppercase;
-  margin: auto 0;
-  display: block;
+  margin: auto 0.5em;
   text-decoration: none;
+  padding: 0.3em;
+  color: mintcream;
+  display: block;
+  background-color: MediumSeaGreen;
+  border: 1px solid MediumSeaGreen;
+  border-radius: 0.2em;
 }
 
 .nav-bar .nav-link {
+  margin: 0;
+  padding: 1.2em;
   display: block;
-  font-family: "Oswald", sans-serif;
+  font-family: "Sora", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 900;
-  color: white;
+  color: seashell;
+  border-radius: 0.3rem;
+  transition: transform 0.3s;
 }
+
 #section-1 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  background-color: white;
+  background-color: seashell;
+  border-top: 1px solid #777;
 }
-
+.title-wrapper {
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 #section-2 {
+  font-family: inherit;
+  color: black;
   width: 100%;
   height: 100vh;
-  background-color: blue;
+  background-color: seashell;
+  border-top: 1px solid #777;
+}
+
+#section-2 h1 {
+  font-family: "Sora", sans-serif;
+  text-align: center;
+  font-size: 5rem;
 }
 
 #section-3 {
   height: 100vh;
-  background-color: red;
+  background-color: seashell;
+  border-top: 1px solid #777;
 }
 
 #section-4 {
   height: 100vh;
-  background-color: orange;
+  background-color: seashell;
+  border-top: 1px solid #777;
 }
 
 .intro-title {
   font-weight: bold;
   font-size: 15rem;
-  font-family: "Oswald", sans-serif;
-  transition: transform 0.1s ease-in-out;
+  font-family: "Sora", sans-serif;
 }
 
 .title-hide {
@@ -90,11 +114,15 @@ main {
 }
 .title-reveal {
   opacity: 1;
-  transition: all 3s;
+  transition: opacity 2s, color 0.5s;
 }
 
 .intro-title:hover {
-  transform: scale(1.5);
   cursor: pointer;
   color: dodgerblue;
+}
+
+.nav-bar a:hover {
+  background-color: dodgerblue;
+  transform: scale(1.2);
 }
