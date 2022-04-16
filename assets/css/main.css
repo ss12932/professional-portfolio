@@ -35,12 +35,12 @@ main {
   margin-top: 10vh;
 }
 .header-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   margin: auto 0.5em;
   text-decoration: none;
-  padding: 0.3em;
+  padding: 0.5em;
   color: white;
   display: block;
   background-color: dodgerblue;
@@ -64,9 +64,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: seashell;
+  height: 90vh;
+  background-color: white;
   transition: opacity 2s, color 0.5s;
+  border-bottom: 1px solid black;
 }
 .title-wrapper {
   display: flex;
@@ -79,28 +80,49 @@ main {
   font-family: inherit;
   color: black;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-color: white;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #section-2 h1 {
-  text-align: center;
   font-size: 5rem;
 }
 
+#section-2 h1:hover {
+  cursor: pointer;
+  color: dodgerblue;
+  transition: color 0.5s;
+}
+#section-3 h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+#section-3 h1:hover {
+  cursor: pointer;
+  color: dodgerblue;
+  transition: color 0.5s;
+}
 #section-3 {
-  height: 100vh;
+  height: 90vh;
   background-color: white;
+  margin-left: 1em;
 }
 
 #section-4 {
-  height: 100vh;
+  height: 90vh;
   background-color: white;
 }
 .avatar-img {
-  transform: scale(1.1);
+  border-radius: 1em;
+  transform: scale(0.9);
+  box-shadow: 10px 10px 15px black;
+  object-fit: contain;
 }
-
 .anchor-link {
   text-decoration: none;
   display: block;
@@ -110,14 +132,23 @@ main {
   color: white;
   cursor: pointer;
 }
-
+.about-description {
+  width: 52rem;
+  border: 2px solid grey;
+  border-radius: 0.5em;
+  padding: 1.6em;
+  background-color: white;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  box-shadow: 10px 10px 15px black;
+}
 .anchor-link:hover {
   transform: scale(1.3);
   transition: transform 0.3s;
 }
 .intro-title {
   font-weight: bold;
-  font-size: 15rem;
+  font-size: 14rem;
 }
 
 .title-hide {
@@ -135,12 +166,112 @@ main {
 
 .nav-bar a:hover {
   background-color: dodgerblue;
-  transform: scale(1.2);
 }
 .section2-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 100%;
+}
+.applications {
+  width: 100%;
+}
+.skills-title {
+  align-self: flex-start;
+}
+.section3-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 3em;
+}
+
+.skills-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evently;
+  align-items: flex-start;
+  width: 10em;
+}
+
+.skills-bar p:nth-child(2) {
+  display: block;
+  text-align: center;
+  background-color: crimson;
+  width: 100%;
+  padding: 1em;
+  border-radius: 0.3em;
+}
+
+.skills-bar p:nth-child(3) {
+  display: block;
+  text-align: center;
+  background-color: dodgerblue;
+  color: white;
+  padding: 1em;
+  width: 100%;
+  border-radius: 0.3em;
+}
+
+.skills-bar p:nth-child(4) {
+  display: block;
+  text-align: center;
+  background-color: gold;
+  color: black;
+  padding: 1em;
+  width: 100%;
+  border-radius: 0.3em;
+}
+.skills-bar p:nth-child(5) {
+  display: block;
+  text-align: center;
+  background-color: slateblue;
+  color: white;
+  padding: 1em;
+  width: 100%;
+  border-radius: 0.3em;
+}
+
+.secondary-project-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: 2em;
+}
+.main-card-container {
+  margin: 0.3em;
+  width: 30em;
+}
+.main-card-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.card-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.card-container {
+  margin: 0.3em;
+  width: 20em;
+}
+
+@media screen and (max-width: 1200px) {
+  .secondary-project-bar {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header-title {
+    padding: 0.2em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro-title {
+    font-size: 10rem;
+  }
+}
+@media screen and (max-width: 600px) {
 }
