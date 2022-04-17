@@ -108,7 +108,7 @@ main {
   transition: color 0.5s;
 }
 #section-3 {
-  height: 90vh;
+  min-height: 90vh;
   background-color: white;
   margin-left: 1em;
 }
@@ -186,7 +186,7 @@ main {
   gap: 3em;
 }
 
-.skills-bar {
+.skills-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -194,7 +194,7 @@ main {
   width: 10em;
 }
 
-.skills-bar p:nth-child(2) {
+.skills-container p:nth-child(1) {
   display: block;
   text-align: center;
   background-color: crimson;
@@ -203,7 +203,7 @@ main {
   border-radius: 0.3em;
 }
 
-.skills-bar p:nth-child(3) {
+.skills-container p:nth-child(2) {
   display: block;
   text-align: center;
   background-color: dodgerblue;
@@ -213,7 +213,7 @@ main {
   border-radius: 0.3em;
 }
 
-.skills-bar p:nth-child(4) {
+.skills-container p:nth-child(3) {
   display: block;
   text-align: center;
   background-color: gold;
@@ -222,7 +222,7 @@ main {
   width: 100%;
   border-radius: 0.3em;
 }
-.skills-bar p:nth-child(5) {
+.skills-container p:nth-child(4) {
   display: block;
   text-align: center;
   background-color: slateblue;
@@ -270,8 +270,32 @@ main {
   width: 45%;
   color: white;
   padding-bottom: 2rem;
-  ;
 }
+
+.nav-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  height: 8vh;
+}
+
+.nav-footer {
+  background-color: black;
+}
+
+.nav-footer a {
+  text-decoration: none;
+  color: white;
+  padding: 0.3em;
+  margin-right: 3em;
+}
+
+.nav-footer a:hover {
+  background-color: dodgerblue;
+}
+
 @media screen and (max-width: 1200px) {
   .secondary-project-bar {
     flex-direction: column;
@@ -297,22 +321,23 @@ main {
   .intro-title {
     font-size: 10rem;
   }
-  .applications h2 {
-    text-align: center;
-  }
-  .card-container {
-    width: 90%;
-    margin: 0 auto;
 
   .section3-wrapper {
     flex-direction: column;
   }
 
-  .skills-bar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  .main-card-container,
+  .card-container {
+    margin: 0 auto;
+  }
+  .skills-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .skills-title,
+  .applications h2 {
+    text-align: center;
   }
 }
 @media screen and (max-width: 600px) {
