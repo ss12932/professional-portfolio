@@ -1,5 +1,5 @@
 /* || Contents || */
-
+/* || 0. Root/Custom Properties|| */
 /* || 1. General/Reset Styles|| */
 /* || 2. Header and Main Navigation Styles  || */
 /* || 3. Section 1 Styles || */
@@ -11,16 +11,21 @@
 
 /* use cmd + f to navigate to relevant section, eg. typing 6.  will take you to Footer Styles */
 
+/* || 0. Root/Custom Properties|| */
+
+:root {
+  font-size: 10px;
+  font-family: "Sora", sans-serif;
+  --clr-white: white;
+  --clr-dodgerblue: dodgerblue;
+  --clr-black: black;
+}
+
 /* || 1. General/Reset Styles|| */
 
 * {
   box-sizing: border-box;
   scroll-margin-top: 10vh;
-}
-
-:root {
-  font-size: 10px;
-  font-family: "Sora", sans-serif;
 }
 
 body {
@@ -38,7 +43,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: var(--clr-black);
   z-index: 10;
 }
 
@@ -49,9 +54,9 @@ body {
   margin: auto 0.5em;
   text-decoration: none;
   padding: 0.5em;
-  color: white;
+  color: var(--clr-white);
   display: block;
-  background-color: dodgerblue;
+  background-color: var(--clr-dodgerblue);
   border-radius: 0.2em;
 }
 
@@ -69,7 +74,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 900;
-  color: white;
+  color: var(--clr-white);
   border-radius: 0.3rem;
   transition: transform 0.3s;
 }
@@ -86,7 +91,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background-color: white;
+  background-color: var(--clr-white);
   transition: opacity 2s, color 0.5s;
 }
 .title-wrapper {
@@ -104,11 +109,11 @@ main {
 
 .intro-title:hover {
   cursor: pointer;
-  color: dodgerblue;
+  color: var(--clr-dodgerblue);
 }
 
 .nav-bar a:hover {
-  background-color: dodgerblue;
+  background-color: var(--clr-dodgerblue);
 }
 
 .title-hide {
@@ -124,10 +129,10 @@ main {
 
 #section-2 {
   font-family: inherit;
-  color: black;
+  color: var(--clr-black);
   width: 100%;
   height: 90vh;
-  background-color: white;
+  background-color: var(--clr-white);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -147,14 +152,14 @@ main {
 
 #section-2 h1:hover {
   cursor: pointer;
-  color: dodgerblue;
+  color: var(--clr-dodgerblue);
   transition: color 0.5s;
 }
 
 .avatar-img {
   border-radius: 1em;
   transform: scale(0.9);
-  box-shadow: 10px 10px 15px black;
+  box-shadow: 10px 10px 15px var(--clr-black);
   object-fit: contain;
 }
 
@@ -162,9 +167,9 @@ main {
   text-decoration: none;
   display: block;
   padding: 1em;
-  background-color: dodgerblue;
+  background-color: var(--clr-dodgerblue);
   border-radius: 1em;
-  color: white;
+  color: var(--clr-white);
   cursor: pointer;
 }
 
@@ -173,10 +178,10 @@ main {
   border: 2px solid grey;
   border-radius: 0.5em;
   padding: 1.6em;
-  background-color: white;
+  background-color: var(--clr-white);
   font-size: 1.4rem;
   line-height: 1.2em;
-  box-shadow: 10px 10px 15px black;
+  box-shadow: 10px 10px 15px var(--clr-black);
 }
 
 .anchor-link:hover {
@@ -193,12 +198,12 @@ main {
 
 #section-3 h1:hover {
   cursor: pointer;
-  color: dodgerblue;
+  color: var(--clr-dodgerblue);
   transition: color 0.5s;
 }
 #section-3 {
   min-height: 90vh;
-  background-color: white;
+  background-color: var(--clr-white);
   margin-left: 1em;
 }
 
@@ -238,7 +243,7 @@ main {
 .skills-container p:nth-child(2) {
   display: block;
   text-align: center;
-  background-color: dodgerblue;
+  background-color: var(--clr-dodgerblue);
   color: white;
   padding: 1em;
   width: 100%;
@@ -258,7 +263,7 @@ main {
   display: block;
   text-align: center;
   background-color: slateblue;
-  color: white;
+  color: var(--clr-white);
   padding: 1em;
   width: 100%;
   border-radius: 0.3em;
@@ -296,7 +301,7 @@ main {
   bottom: 0.2em;
   background-color: rgba(218, 223, 225, 0.5);
   width: 45%;
-  color: white;
+  color: var(--clr-white);
   padding-bottom: 2rem;
 }
 
@@ -304,7 +309,7 @@ main {
 
 #section-4 {
   height: 82vh;
-  background-color: white;
+  background-color: var(--clr-white);
 }
 
 #section-4 h2 {
@@ -317,7 +322,7 @@ main {
 }
 
 #section-4 h2:hover {
-  color: dodgerblue;
+  color: var(--clr-dodgerblue);
   transition: color 0.5s;
 }
 
@@ -327,24 +332,24 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
-  color: white;
+  color: var(--clr-white);
   align-items: center;
   height: 8vh;
 }
 
 .nav-footer {
-  background-color: black;
+  background-color: var(--clr-black);
 }
 
 .nav-footer a {
   text-decoration: none;
-  color: white;
+  color: var(--clr-white);
   padding: 0.3em;
   margin-right: 3em;
 }
 
 .nav-footer a:hover {
-  background-color: dodgerblue;
+  background-color: var(--clr-dodgerblue);
 }
 
 /* || 8. Media Queries || */
