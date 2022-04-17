@@ -138,7 +138,7 @@ main {
   border-radius: 0.5em;
   padding: 1.6em;
   background-color: white;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   line-height: 1.2em;
   box-shadow: 10px 10px 15px black;
 }
@@ -189,7 +189,7 @@ main {
 .skills-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-evently;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 10em;
 }
@@ -231,14 +231,18 @@ main {
   width: 100%;
   border-radius: 0.3em;
 }
-
+.applications {
+  display: flex;
+  flex-direction: column;
+}
 .secondary-project-bar {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
-  margin-right: 2em;
+  width: 20rem;
 }
 .main-card-container {
+  position: relative;
   margin: 0.3em;
   width: 30em;
 }
@@ -254,10 +258,20 @@ main {
 }
 
 .card-container {
-  margin: 0.3em;
+  position: relative;
+  margin: 0.3rem;
   width: 20em;
 }
-
+.cardapp-info {
+  position: absolute;
+  left: 0;
+  bottom: 0.2em;
+  background-color: grey;
+  width: 50%;
+  color: white;
+  padding-bottom: 2rem;
+  opacity: 0.9;
+}
 @media screen and (max-width: 1200px) {
   .secondary-project-bar {
     flex-direction: column;
@@ -272,6 +286,32 @@ main {
   .intro-title {
     font-size: 10rem;
   }
+  .applications h2 {
+    text-align: center;
+  }
+  .card-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .main-card-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .section3-wrapper {
+    flex-direction: column;
+  }
+
+  .skills-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 600px) {
+  .intro-title {
+    font-size: 8rem;
+  }
 }
