@@ -237,14 +237,14 @@ main {
 }
 .secondary-project-bar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  width: 20rem;
+  width: 100%;
 }
 .main-card-container {
   position: relative;
   margin: 0.3em;
-  width: 30em;
+  width: 75%;
 }
 .main-card-container img {
   object-fit: contain;
@@ -260,26 +260,37 @@ main {
 .card-container {
   position: relative;
   margin: 0.3rem;
-  width: 20em;
+  width: 30%;
 }
 .cardapp-info {
   position: absolute;
   left: 0;
   bottom: 0.2em;
-  background-color: grey;
-  width: 50%;
+  background-color: rgba(218, 223, 225, 0.5);
+  width: 45%;
   color: white;
   padding-bottom: 2rem;
-  opacity: 0.9;
+  ;
 }
 @media screen and (max-width: 1200px) {
   .secondary-project-bar {
     flex-direction: column;
   }
+
+  .card-container {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 992px) {
   .header-title {
     padding: 0.2em;
+  }
+
+  .card-container {
+    width: 80vw;
+  }
+  .main-card-container {
+    width: 80vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -292,12 +303,6 @@ main {
   .card-container {
     width: 90%;
     margin: 0 auto;
-  }
-
-  .main-card-container {
-    width: 90%;
-    margin: 0 auto;
-  }
 
   .section3-wrapper {
     flex-direction: column;
