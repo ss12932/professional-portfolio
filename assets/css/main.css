@@ -34,6 +34,11 @@ body {
   min-height: 100vh;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* || 2. Header and Main Navigation Styles  || */
 
 .header {
@@ -76,11 +81,29 @@ body {
   font-weight: 900;
   color: var(--clr-white);
   border-radius: 0.3rem;
-  transition: transform 0.3s;
+  transition: background-color 0.4s ease;
+}
+
+.nav-bar a:hover {
+  background-color: var(--clr-dodgerblue);
 }
 
 main {
   margin-top: 10vh;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 2em;
+  height: 0.1em;
+  margin: 0.6em;
+  transition: transform 0.4s ease-in-out;
+  background-color: var(--clr-white);
 }
 
 /* || 3. Section 1 Styles || */
@@ -110,10 +133,6 @@ main {
 .intro-title:hover {
   cursor: pointer;
   color: var(--clr-dodgerblue);
-}
-
-.nav-bar a:hover {
-  background-color: var(--clr-dodgerblue);
 }
 
 .title-hide {
@@ -283,7 +302,7 @@ main {
 .cardapp-info {
   position: absolute;
   left: 0;
-  bottom: 0.2em;
+  bottom: 0;
   background-color: rgba(218, 223, 225, 0.5);
   width: 45%;
   color: var(--clr-white);
@@ -303,12 +322,13 @@ main {
 }
 #section-4 p {
   text-align: center;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 #section-4 h2:hover {
   color: var(--clr-dodgerblue);
   transition: color 0.5s;
+  cursor: pointer;
 }
 
 /* || 7. Footer Styles || */
@@ -329,8 +349,10 @@ main {
 .nav-footer a {
   text-decoration: none;
   color: var(--clr-white);
+  border-radius: 0.3em;
   padding: 0.3em;
   margin-right: 3em;
+  transition: background-color 0.4s ease;
 }
 
 .nav-footer a:hover {
@@ -385,9 +407,55 @@ main {
   .applications h2 {
     text-align: center;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(0.7em) rotate(45deg);
+    background-color: var(--clr-dodgerblue);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-0.7em) rotate(-45deg);
+    background-color: var(--clr-dodgerblue);
+  }
+
+  .nav-bar {
+    position: fixed;
+    left: -100%;
+    top: 10vh;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--clr-black);
+    width: 100%;
+    transition: transform 0.4s;
+  }
+  .nav-link {
+    margin: 0.15em 0;
+  }
+
+  .nav-bar.active {
+    left: 0;
+  }
+  .header-title {
+    align-self: center;
+    padding: 0.5em;
+  }
 }
 @media screen and (max-width: 600px) {
   .intro-title {
     font-size: 8rem;
   }
 }
+
+@media screen and (max-width: 392px) {
+  .intro-title {
+    font-size: 5rem;
+  }
+} ;
