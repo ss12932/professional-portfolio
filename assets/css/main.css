@@ -1,3 +1,18 @@
+/* || Contents || */
+
+/* || 1. General/Reset Styles|| */
+/* || 2. Header and Main Navigation Styles  || */
+/* || 3. Section 1 Styles || */
+/* || 4. Section 2 Styles || */
+/* || 5. Section 3 Styles || */
+/* || 6. Section 4 Styles || */
+/* || 7. Footer Styles || */
+/* || 8. Media Queries || */
+
+/* use cmd + f to navigate to relevant section, eg. typing 6.  will take you to Footer Styles */
+
+/* || 1. General/Reset Styles|| */
+
 * {
   box-sizing: border-box;
   scroll-margin-top: 10vh;
@@ -14,6 +29,8 @@ body {
   min-height: 100vh;
 }
 
+/* || 2. Header and Main Navigation Styles  || */
+
 .header {
   position: fixed;
   top: 0;
@@ -25,15 +42,6 @@ body {
   z-index: 10;
 }
 
-.nav-bar {
-  width: 85%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-main {
-  margin-top: 10vh;
-}
 .header-title {
   font-size: 2rem;
   font-weight: bold;
@@ -47,6 +55,13 @@ main {
   border-radius: 0.2em;
 }
 
+.nav-bar {
+  width: 85%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .nav-bar .nav-link {
   margin: 0;
   padding: 0.9em;
@@ -58,6 +73,12 @@ main {
   border-radius: 0.3rem;
   transition: transform 0.3s;
 }
+
+main {
+  margin-top: 10vh;
+}
+
+/* || 3. Section 1 Styles || */
 
 #section-1 {
   display: flex;
@@ -75,6 +96,32 @@ main {
   justify-content: space-around;
   align-items: center;
 }
+
+.intro-title {
+  font-weight: bold;
+  font-size: 14rem;
+}
+
+.intro-title:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.nav-bar a:hover {
+  background-color: dodgerblue;
+}
+
+.title-hide {
+  opacity: 0;
+}
+
+.title-reveal {
+  opacity: 1;
+  transition: opacity 2s, color 0.5s;
+}
+
+/* || 4. Section 2 Styles || */
+
 #section-2 {
   font-family: inherit;
   color: black;
@@ -86,6 +133,14 @@ main {
   align-items: center;
 }
 
+.section2-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 #section-2 h1 {
   font-size: 5rem;
 }
@@ -95,6 +150,42 @@ main {
   color: dodgerblue;
   transition: color 0.5s;
 }
+
+.avatar-img {
+  border-radius: 1em;
+  transform: scale(0.9);
+  box-shadow: 10px 10px 15px black;
+  object-fit: contain;
+}
+
+.anchor-link {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  background-color: dodgerblue;
+  border-radius: 1em;
+  color: white;
+  cursor: pointer;
+}
+
+.about-description {
+  width: 52rem;
+  border: 2px solid grey;
+  border-radius: 0.5em;
+  padding: 1.6em;
+  background-color: white;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+  box-shadow: 10px 10px 15px black;
+}
+
+.anchor-link:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s;
+}
+
+/* || 5. Section 3 Styles || */
+
 #section-3 h1 {
   font-size: 5rem;
   text-align: center;
@@ -111,77 +202,14 @@ main {
   margin-left: 1em;
 }
 
-#section-4 {
-  height: 82vh;
-  background-color: white;
-}
-.avatar-img {
-  border-radius: 1em;
-  transform: scale(0.9);
-  box-shadow: 10px 10px 15px black;
-  object-fit: contain;
-}
-.anchor-link {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  background-color: dodgerblue;
-  border-radius: 1em;
-  color: white;
-  cursor: pointer;
-}
-.about-description {
-  width: 52rem;
-  border: 2px solid grey;
-  border-radius: 0.5em;
-  padding: 1.6em;
-  background-color: white;
-  font-size: 1.4rem;
-  line-height: 1.2em;
-  box-shadow: 10px 10px 15px black;
-}
-.anchor-link:hover {
-  transform: scale(1.3);
-  transition: transform 0.3s;
-}
-.intro-title {
-  font-weight: bold;
-  font-size: 14rem;
-}
-
-.title-hide {
-  opacity: 0;
-}
-.title-reveal {
-  opacity: 1;
-  transition: opacity 2s, color 0.5s;
-}
-
-.intro-title:hover {
-  cursor: pointer;
-  color: dodgerblue;
-}
-
-.nav-bar a:hover {
-  background-color: dodgerblue;
-}
-.section2-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.applications {
-  width: 100%;
-}
-.skills-title {
-  align-self: flex-start;
-}
 .section3-wrapper {
   display: flex;
   width: 100%;
   gap: 3em;
+}
+
+.skills-title {
+  align-self: flex-start;
 }
 
 .skills-container {
@@ -190,6 +218,12 @@ main {
   justify-content: flex-start;
   align-items: flex-start;
   width: 10em;
+}
+
+.applications {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .skills-container p:nth-child(1) {
@@ -229,10 +263,6 @@ main {
   width: 100%;
   border-radius: 0.3em;
 }
-.applications {
-  display: flex;
-  flex-direction: column;
-}
 .secondary-project-bar {
   display: flex;
   flex-direction: row;
@@ -270,6 +300,29 @@ main {
   padding-bottom: 2rem;
 }
 
+/* || 6. Section 4 Styles || */
+
+#section-4 {
+  height: 82vh;
+  background-color: white;
+}
+
+#section-4 h2 {
+  text-align: center;
+  font-size: 5rem;
+}
+#section-4 p {
+  text-align: center;
+  font-size: 4rem;
+}
+
+#section-4 h2:hover {
+  color: dodgerblue;
+  transition: color 0.5s;
+}
+
+/* || 7. Footer Styles || */
+
 .nav-footer {
   width: 100%;
   display: flex;
@@ -294,21 +347,7 @@ main {
   background-color: dodgerblue;
 }
 
-#section-4 h2 {
-  text-align: center;
-  font-size: 5rem;
-}
-#section-4 p {
-  text-align: center;
-  font-size: 4rem;
-}
-
-#section-4 h2:hover {
-  color: dodgerblue;
-  transition: color 0.5s;
-}
-
-/* Media Queries */
+/* || 8. Media Queries || */
 
 @media screen and (max-width: 1200px) {
   .secondary-project-bar {
@@ -319,9 +358,7 @@ main {
     width: 55%;
   }
 
-  .applications {
-    align-items: center;
-  }
+  .applications,
   .secondary-project-bar {
     align-items: center;
   }
@@ -331,9 +368,7 @@ main {
     padding: 0.2em;
   }
 
-  .card-container {
-    width: 75vw;
-  }
+  .card-container,
   .main-card-container {
     width: 75vw;
   }
@@ -348,12 +383,12 @@ main {
   }
 
   .main-card-container,
-  .card-container {
+  .card-container,
+  .skills-container {
     margin: 0 auto;
   }
   .skills-container {
     width: 50%;
-    margin: 0 auto;
   }
 
   .skills-title,
