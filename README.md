@@ -6,7 +6,7 @@ This week's assignment is to create a professional portfolio page from scratch w
 
 ### Screenshot of Deployed Application
 
-![Professional Portfolio](./assets/images/Screenshot 2022-04-18 at 11.53.55.png)
+![Professional Portfolio](./assets/images/application-screenshot.png)
 
 ### FIGMA wireframe Screenshot
 
