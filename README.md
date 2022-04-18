@@ -8,6 +8,10 @@ This week's assignment is to create a professional portfolio page from scratch w
 
 ![Professional Portfolio](./assets/images/Screenshot 2022-04-18 at 11.53.55.png)
 
+### FIGMA wireframe Screenshot
+
+![FIGMA Wireframe](./assets/images/profession-portfolio-wireframe.png)
+
 ### User Story
 
 ```
