@@ -8,9 +8,9 @@ This week's assignment is to create a professional portfolio page from scratch w
 
 ![Professional Portfolio](./assets/images/application-screenshot.png)
 
-### FIGMA wireframe Screenshot
+### FIGMA wireframe Screenshot Link
 
-![FIGMA Wireframe](./assets/images/profession-portfolio-wireframe.png)
+https://github.com/ss12932/professional-portfolio/blob/main/assets/images/profession-portfolio-wireframe.png
 
 ### User Story
 
